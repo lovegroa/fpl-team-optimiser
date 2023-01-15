@@ -1,0 +1,13 @@
+import { Pool } from 'pg';
+import { CurrentTable } from './types';
+export declare const getFile: (filePath: string) => unknown;
+export declare const updateTable: (pool: Pool, currentTable: CurrentTable) => void;
+export declare const updateFixtures: (pool: Pool) => Promise<void>;
+export declare const updateProbabilities: (pool: Pool) => Promise<void>;
+export declare const updatePlayers: (pool: Pool) => Promise<void>;
+export declare const updateGameweeks: (pool: Pool, currentGameweekNo: number) => Promise<void>;
+export declare const calculateMultipliers: (pool: Pool) => void;
+export declare const calculatedPredictedPoints: (pool: Pool, factor: number) => void;
+export declare const createPlayerFixtures: (pool: Pool) => Promise<void>;
+export declare const updatePlayersExpectedToPlay: (pool: Pool) => Promise<void>;
+export declare const findBestTeam: (gameweeks: number[], pool: Pool, playersToInclude: number[], playersToIgnoreG: number[]) => void;
